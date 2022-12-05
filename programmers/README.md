@@ -6,6 +6,8 @@ str = 'hello world'
 str = str.replace('o', '', 1)
 print(str) # hell world
 ```
+- 값이 문자열일때 쓸수있는 메서드이다.
+- 변경할 문자를 지정하고 다른 문자로 치환할수있다.
 - replace(str, str, cnt)
 - 인자는 차례로 변경될 문자, 치환할 문자, 수행횟수 
 ### in, not in 키워드
