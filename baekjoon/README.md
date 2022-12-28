@@ -4,82 +4,24 @@
 
 - input() : 한 줄의 문자열을 입력
 
-- map() : 리스트의 모든 원소에 각각 특정한 함수를 적용할 때 사용
-
-```python
-# 공백을 기준으로 구분된 데이터를 입력 받을 떄
-
-data = list(map(int, input().split()))
-
-# 공백을 기준으로 구분된 데이터가 많지 않다면 
-a, b, c = map(int, input().split())
-```
-
-- 파일 입출력
-    - sys.stdin = open("input.txt", "r")
+- split()
+a.split()처럼 괄호 안에 아무 값도 넣어 주지 않으면 공백(스페이스, 탭, 엔터 등)을 기준으로 문자열을 나누어 준다. 만약 b.split(':')처럼 괄호 안에 특정 값이 있을 경우에는 괄호 안의 값을 구분자로 해서 문자열을 나누어 준다. 
  
-
-- 좀 더 빠르게 입력 받기
-    - sys.stdin.readline() 사용
-    - 단, 입력 후 엔터가 사용되므로 rstrip() 를 함께 사용
+- input().split()
+여러개 입력받을 때. 리스트 형태로 반환
+ 
+- map
+map(데이터 타입, 리스트) : 리스트 원소들을 해당 데이터 타입으로 변환
 
 ```python
+# input() 이용
+a, b = map(int, input().split())
+print(a+b)
+
+# sys.stdin.readline() 이용
 import sys
-
-## 공백으로 구분된 2개 숫자 입력 받기
-N, M = map(int,sys.stdin.readline().split())
-
-## 2차원 리스트 입력 받기
-board = [list(map(int,sys.stdin.readline().split())) for _ in range(N)]
-
-## 문자열 입력 받기
-data = sys.stdin.readline().rstrip()
+a, b = map(int, sys.stdin.readline().split())
+print(a+b)
 ```
 
-- f-string (python 3.6 이상 가능)
-    - 문자열 앞에 접두사 f 를 붙여서 사용. 중괄호 안에 변수명을 기입하여 간단히 문자열과 정수를 함께 넣을 수 있음
-
-```python
-answer = 5
-print(f"정답은 {answer} 입니다.")
-```
-
-- 리스트 출력시 대괄호 제거하기 : * 사용
-    - 백준을 풀다보면 리스트에 담긴 값을 출력해야 하는 경우가 있는데, 파이썬에서 단순히 리스트를 출력하면 [1, 2, 3] 이런식으로 출력이 된다. 이를 1 2 3 으로 출력하기 위해서는 아래와 같은 방법이 있다.
-
-```python
-result = [1, 2, 3]
-
-# 기본적인 리스트 출력시
-print(result)
-# [1,2,3]
-
-# for loop으로 원소를 하나씩 출력
-for i in range(len(result)):
-    print(result[i], end=' ')
-# 1 2 3
-
-# 리스트의 원소를 언패킹 시켜서 출력
-print(*result)
-# 1 2 3 
-```
-
-- N x M 크기의 이차원 리스트 초기화 및 입력받기
-    - 시뮬레이션 문제에서 주어지는 입력 중 가장 많은 형태의 입력을 list comprehension 으로 받을 수 있다.
-
-```python
-# N x M 리스트 초기화 ex) 해당 좌표에 방문 체크하는 배열
-
-visited = [[False]*m for _ in range(n)]
-
-# 입력
-5 9
-0 0 0 0 0 0 0 0 0
-0 0 0 1 1 0 0 0 0
-0 0 0 1 1 0 1 1 0
-0 0 1 1 1 1 1 1 0
-0 0 1 1 1 1 1 0 0
-
-n, m = map(int, input().split())
-board = [list(map(int, input().split())) for _ in range(n)]
-```
+일단 후자가 더 빠른 방식이다.
