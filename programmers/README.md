@@ -1,5 +1,31 @@
 # 프로그래머스 문제풀이
+
 ## 배울사항
+
+### 포문을 이용해서 0으로 가득찬 리스트 만들기
+
+```python
+test = [0 for i in range(5)]
+print(test) # [0, 0, 0, 0, 0]
+```
+
+### find() 메서드
+
+```python
+"""
+[1]  find 함수는 문자열데이터에 특정값이 있는지 확인해준다.
+    특정값을 찾으면 인덱스를 반환해준다.
+    못찾으면 -1을 반환해준다.
+"""
+
+a = "abcdefg"
+test1 = a.find("b") # 1
+print(test1)
+
+test2 = a.find("z") # -1
+print(test2)
+```
+
 ### replace() 메서드
 ```python
 str = 'hello world'
