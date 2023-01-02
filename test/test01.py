@@ -11,3 +11,7 @@ for i in range(1, num+1):
         current //= 10
 
 print(num, count)
+
+arr = [1,2,3,4,5]
+print(arr[1:3]) 
+print(arr)

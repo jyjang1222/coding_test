@@ -1,6 +1,6 @@
 # 프로그래머스 문제풀이
 
-## 배울사항
+## 배열 및 문자열 배울사항
 
 ### 특정 수로 가득찬 리스트 만들기
 
@@ -12,21 +12,20 @@ arr = [1] * 5
 print(arr) # [1,1,1,1,1]
 ```
 
-### find() 메서드
+### 배열 자르기
 
 ```python
-"""
-[1]  find 함수는 문자열데이터에 특정값이 있는지 확인해준다.
-    특정값을 찾으면 인덱스를 반환해준다.
-    못찾으면 -1을 반환해준다.
-"""
+arr = [1,2,3,4,5]
+print(arr[1:3]) # [2, 3]
 
-a = "abcdefg"
-test1 = a.find("b") # 1
-print(test1)
+text = "java python javascript"
 
-test2 = a.find("z") # -1
-print(test2)
+a = text[0:4] # java   
+b = text[:4] # java
+c = text[7:14] # thon ja
+d =  text[7:] # thon javascript
+e = text[5:11] # python
+f = text[12:22] # javascript
 ```
 
 ### replace() 메서드
@@ -143,4 +142,28 @@ print(arr)
 
 arr2 = list(range(0,10))
 print(arr2)
+```
+
+### split()
+
+```python
+string = 'abc,def,ghi'
+arr = string.split(',') # [abc, def, ghi]
+```
+
+### find() 메서드
+
+```python
+"""
+[1]  find 함수는 문자열데이터에 특정값이 있는지 확인해준다.
+    특정값을 찾으면 인덱스를 반환해준다.
+    못찾으면 -1을 반환해준다.
+"""
+
+a = "abcdefg"
+test1 = a.find("b") # 1
+print(test1)
+
+test2 = a.find("z") # -1
+print(test2)
 ```
