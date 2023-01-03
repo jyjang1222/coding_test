@@ -212,7 +212,7 @@ d = c.lower()
 print(d) # asdaasdsda124sads
 ```
 
-### list()
+### list(), map()
 
 ```python
 """
@@ -242,7 +242,7 @@ arr = list(arr) # 변환된 map을 다시 list로 변환
 print(arr)
 ```
 
-### sorted(), map()
+### sorted()
 
 ```python
 n = 118372
