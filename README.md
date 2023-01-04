@@ -1,8 +1,6 @@
-# 코딩테스트 모음
+# 파이썬 개념 정리
 
-## 배열 및 문자열 배울사항
-
-### 특정 수로 가득찬 리스트 만들기
+## 특정 수로 가득찬 리스트 만들기
 
 ```python
 test = [0 for i in range(5)]
@@ -12,7 +10,7 @@ arr = [1] * 5
 print(arr) # [1, 1, 1, 1, 1]
 ```
 
-### 배열 자르기
+## 배열 자르기
 
 ```python
 arr = [1,2,3,4,5]
@@ -28,7 +26,7 @@ e = text[5:11] # python
 f = text[12:22] # javascript
 ```
 
-### replace() 메서드
+## replace() 메서드
 
 ```python
 str = 'hello world'
@@ -40,7 +38,7 @@ print(str) # hell world
 - replace(str, str, cnt)
 - 인자는 차례로 변경될 문자, 치환할 문자, 수행횟수
 
-### in, not in 키워드
+## in, not in 키워드
 
 ```python
 str = 'hello world'
@@ -59,7 +57,7 @@ print(bool) # False
 - 데이터 안에 값이 있는지없는지 반환하는 키워드이다.
 - in 키워드는 안에 있으면 true반환 없으면 false반환 이고 not in은 그 반대이다.
 
-### insert()
+## insert()
 
 ```python
 arr = [10,20,30]
@@ -67,14 +65,14 @@ arr.insert(2, 500)
 # [10,20,500,30]
 ```
 
-### index()
+## index()
 
 ```python
 arr = [10,20,30]
 print(arr.index(20)) # 1
 ```
 
-### count()
+## count()
 ```python
 arr = [1] * 10
 print(arr.count(1)) # 10
@@ -82,14 +80,14 @@ print(arr.count(1)) # 10
 
 - 해당 값의 갯수를 반환한다.
 
-### reverse()
+## reverse()
 ```python
 arr = [1,2,3,4,5]
 arr.reverse()
 print(arr) # [5,4,3,2,1]
 ```
 
-### sort()
+## sort()
 ```python
 arr = [1,2,3,4,5]
 arr.reverse()
@@ -102,14 +100,14 @@ arr.sort(reverse=True) # [5,4,3,2,1]
 arr.sort(reverse=False) # [1,2,3,4,5]
 ```
 
-### clear()
+## clear()
 ```python
 arr = [1,2,3,4,5]
 arr.clear()
 print(arr) # []
 ```
 
-### remove() , del
+## remove() , del
 
 ```python
 arr = [1,2,3,4,5]
@@ -119,7 +117,7 @@ arr.remove(5) # [1]
 arr.remove(a[0]) # []
 ```
 
-### 리스트 연결
+## 리스트 연결
 
 ```python
 a = [1,2,3]
@@ -130,14 +128,14 @@ d = a * 3
 print(d) # [1,2,3,1,2,3,1,2,3]
 ```
 
-### 리스트 복사
+## 리스트 복사
 
 ```python
 a = [10,10,10,10,10]
 b = a.copy()
 ```
 
-### 배열을 만드는 여러가지 방법
+## 배열을 만드는 여러가지 방법
 
 ```python
 max_product_number = 10
@@ -151,14 +149,14 @@ arr2 = list(range(0,10))
 print(arr2)
 ```
 
-### split()
+## split()
 
 ```python
 string = 'abc,def,ghi'
 arr = string.split(',') # [abc, def, ghi]
 ```
 
-### find() 메서드
+## find() 메서드
 
 ```python
 a = "abcdefg"
@@ -172,7 +170,7 @@ print(test2)
 - find 함수는 문자열데이터에 특정값이 있는지 확인해준다.
 - 특정값을 찾으면 인덱스를 반환해준다, 못찾으면 -1을 반환해준다.
 
-### keys()
+## keys()
 
 ```python
 di = {"a" : 0 , "b" : 1 , "c" : 2}
@@ -184,7 +182,7 @@ for key in di.keys():
 
 - 딕셔너리는 keys() 함수를 이용해서 key값들을 모두 찾은후, key로 value를 찾을수있다. 
 
-### upper(), lower()
+## upper(), lower()
 
 ```python
 a = "asd12vsdads"
@@ -199,7 +197,7 @@ print(d) # asdaasdsda124sads
 - upper() 함수는 문자열의 모든알파벳을 대문자로 바꿔준다. 알파벳이 아닌 문자는 아무영향없다.
 - lower() 함수는 문자열의 모든알파벳을 소문자로 바꿔준다. 알파벳이 아닌 문자는 아무영향없다.
 
-### list(), map()
+## list(), map()
 
 ```python
 n = 12345
@@ -217,7 +215,7 @@ print(arr)
 - list() 함수는 문자열을 리스트로 만들어준다. 
 - map() 함수는 문자로구성되어있는리스트를 정수로 변환해준다. 아래함수와 같이써야한다.
 
-### sorted()
+## sorted()
 
 ```python
 n = 118372
@@ -234,7 +232,7 @@ s3 = sorted(map(int, s2), reverse=True)
 print(s3) # [8, 7, 3, 2, 1, 1]
 ```
 
-### sum(), max(), min()
+## sum(), max(), min()
 ```python
 a = sum([10,20,30,5])
 print(a)
@@ -250,7 +248,7 @@ print(c)
 - max() 함수는 리스트안의 모든값들 중 가장큰값을 반환해준다.
 - min() 함수는 리스트안의 모든값들 중 가장작은값을 반환해준다.
 
-### enumerate
+## enumerate
 
 ```python
 a = [10,20,30,40,50]
